@@ -1,0 +1,31 @@
+<div *ngFor="let input of phoneNumberInputs.controls; index as i" class="mb-3">
+  <input
+    class="border border-gray-700 rounded-xl px-3 py-2 mr-2"
+    type="tel"
+    placeholder="Enter phone number"
+    [formControl]="input"
+  />
+  <button
+    *ngIf="phoneNumberInputs.controls.length > 1"
+    (click)="removeInput(i)"
+    class="bg-red-600 text-white font-semibold px-4 py-2 rounded-xl"
+  >
+    Delete
+  </button>
+</div>
+
+<button
+  (click)="addInput()"
+  class="bg-teal-800 px-4 py-1 text-white rounded-xl font-semibold mr-2"
+  type="button"
+>
+  Add another phone number
+</button>
+
+<button
+  (click)="logPhoneNumbers()"
+  class="bg-emerald-600 px-4 py-1 text-white rounded-xl font-semibold"
+  type="button"
+>
+  Submit
+</button>
