@@ -5,6 +5,7 @@
 ```bash
 git clone https://github.com/srijan-nayak/iraitech-assignment-3.git
 cd iraitech-assignment-3
+npm i
 npm start
 ```
 
